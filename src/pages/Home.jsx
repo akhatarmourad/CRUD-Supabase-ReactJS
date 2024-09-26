@@ -31,9 +31,9 @@ export default function Home() {
   
   return (
     <div>
-        {fetchError && <p>{fetchError}</p>}
+        {fetchError && <p className="bg-red-200 border border-red-300 text-red-700 rounded-lg p-3 text-center my-5">{fetchError}</p>}
         {data && (
-          <div className="flex flex-wrap justify-center gap-5 mt-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mt-10 overflow-auto">
             {
               data.map((item) => {
                 return (
