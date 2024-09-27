@@ -21,7 +21,7 @@ is project is a simple CRUD (Create, Read, Update, Delete) application built usi
 
 The figures below demonstrate the functionality of the CRUD application, along with the Supabase Client Web UI, showcasing the user interface and the process of creating, reading, updating, deleting, and ordering data in real-time.
 
-![Supabase](./public/supabase.png)
+![Supabase](./public/Supabase.png)
 
 ![UI](./public/Read.png)
 
