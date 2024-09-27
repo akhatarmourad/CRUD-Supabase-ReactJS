@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { supabase } from "../config/SupabaseClient";
 import { useState } from "react";
 
-export default function FeatureCard({ item }) {
+export default function FeatureCard({ item, onDelete }) {
   
   const {id, title, desc, rating} = item;
   const [error, setError] = useState('');
@@ -19,7 +19,7 @@ export default function FeatureCard({ item }) {
       .select();
     
     if(error) setError('Failed to delete record !');
-    else navigate('/');
+    else onDelete(id);
   }
 
   return (
@@ -34,7 +34,7 @@ export default function FeatureCard({ item }) {
             </Link>
             <MdDelete 
               className="text-slate-500 transition-all duration-300 hover:scale-105 hover:text-red-500"
-              onClick={() => handleDelete}
+              onClick={handleDelete}
             />
           </div>
         </div>

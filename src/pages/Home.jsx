@@ -28,6 +28,13 @@ export default function Home() {
     
   }, []);
 
+  // Update Local State when deleting an item
+  const handleDelete = (id) => {
+    setData((previousData) => {
+      return previousData.filter(data => data.id !== id)
+    })
+  }
+
   
   return (
     <div>
@@ -37,7 +44,7 @@ export default function Home() {
             {
               data.map((item) => {
                 return (
-                  <FeatureCard item={item} key={item.id}  />
+                  <FeatureCard item={item} key={item.id} onDelete={handleDelete} />
                 );
               })
             }
