@@ -33,7 +33,7 @@ export default function Home() {
     <div>
         {fetchError && <p className="bg-red-200 border border-red-300 text-red-700 rounded-lg p-3 text-center my-5">{fetchError}</p>}
         {data && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mt-10 overflow-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mt-10 overflow-x-auto">
             {
               data.map((item) => {
                 return (
