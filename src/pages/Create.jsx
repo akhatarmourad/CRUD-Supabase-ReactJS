@@ -35,6 +35,14 @@ export default function Create() {
     }
   }
 
+
+  const handleClear= () => {
+    setTitle('');
+    setDesc('');
+    setRating('');
+  }
+
+
   return (
     <div className="bg-slate-300 lg:w-1/2 w-full p-5 rounded-xl mx-auto my-5">
       <h1 className="text-center font-semibold text-slate-700 text-lg">Insert a new Feature</h1>
@@ -65,7 +73,7 @@ export default function Create() {
         />
 
         <div className="flex justify-center gap-10 mt-8">
-          <button className="px-2 py-1 rounded-lg text-white bg-red-500 flex-1">Clear</button>
+          <button onClick={handleClear} className="px-2 py-1 rounded-lg text-white bg-red-500 flex-1">Clear</button>
           <button className="px-2 py-1 rounded-lg text-white bg-sky-500 flex-1">Submit</button>
         </div>
 
